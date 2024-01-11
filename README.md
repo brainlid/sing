@@ -10,6 +10,14 @@ Check out the demo video to see what it does. Make sure your sound is turned on!
 
 [Sound effect demo](./phoenix-sound-effect-demo.mp4)
 
+## Steps to run
+
+- Clone or download the project
+- Download the needed JS package: `cd assets; npm i`
+- `mix deps.get; mix compile`
+- Run the project: `mix phx.server`
+- Visit the [Settings page](http://localhost:4000/settings)
+
 ## Steps to duplicate
 
 The following is a rough outline of the steps taken to add this approach to a project.
