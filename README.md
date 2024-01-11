@@ -1,9 +1,20 @@
 # Sing
 
+A Phoenix LiveView demo application showing how to add sound effects to a LiveView page. Sound effects are linked to button clicks and played locally in the browser, while other sound effects can be triggered by the server.
 
-Steps
+The solution uses the [Howler.js](https://www.npmjs.com/package/howler) library in the browser, making it a mobile friendly solution as well.
 
-- add assets/js/hooks/audio_mp3.js
+## Demo Video
+
+Check out the demo video to see what it does. Make sure your sound is turned on!
+
+![Sound effect demo](phoenix-sound-effect-demo.mp4)
+
+## Steps to duplicate
+
+The following is a rough outline of the steps taken to add this approach to a project.
+
+- add `assets/js/hooks/audio_mp3.js`
 - updated app.js to load hooks
 - add Howler from npm
   - `cd assets; npm i howler` adds to `package.json`
@@ -16,6 +27,6 @@ Steps
 - add delayed sound event pushed from server.
 
 
-Notes:
+**Notes:**
 - In a real application, could use Ecto schemas to validate the input and limits. Keeping it simple.
 
