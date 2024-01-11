@@ -8,7 +8,7 @@ The solution uses the [Howler.js](https://www.npmjs.com/package/howler) library 
 
 Check out the demo video to see what it does. Make sure your sound is turned on!
 
-![Sound effect demo](phoenix-sound-effect-demo.mp4)
+[Sound effect demo](./phoenix-sound-effect-demo.mp4)
 
 ## Steps to duplicate
 
