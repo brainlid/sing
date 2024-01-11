@@ -1,18 +1,21 @@
 # Sing
 
-To start your Phoenix server:
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+Steps
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+- add assets/js/hooks/audio_mp3.js
+- updated app.js to load hooks
+- add Howler from npm
+  - `cd assets; npm i howler` adds to `package.json`
+- `mix esbuild.install`
+- add HTML code for hook to page, output sounds in HTML `data-sounds`
+- add `assign_sounds` to mount in LiveView
+- add `priv/static/audio/` and some audio files.
+- update `lib/sing_web.ex` to add `audio` to the list
+- add code in `index.ex`
+- add delayed sound event pushed from server.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
-## Learn more
+Notes:
+- In a real application, could use Ecto schemas to validate the input and limits. Keeping it simple.
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix

@@ -2,3 +2,49 @@
   Settings
 </.header>
 
+<div
+  id="settings"
+  class="grid grid-cols-1 gap-6 sm:grid-cols-2"
+  phx-hook="AudioMp3"
+  data-sounds={@sounds}
+>
+  <div class="text-center">
+    <div class="mt-6">
+      <.button
+        class="w-full text-xl"
+        phx-click={
+          JS.dispatch("js:play-sound", detail: %{name: @value_up_sound})
+          |> JS.push("value-change", value: %{by: 1})
+        }
+      >
+        <.icon name="hero-plus-circle" class="h-10 w-10" />
+      </.button>
+    </div>
+    <div class="my-4 text-4xl font-medium text-gray-900">
+      <%= @value %>
+    </div>
+    <div>
+      <.button
+        class="w-full text-xl"
+        phx-click={
+          JS.dispatch("js:play-sound", detail: %{name: @value_down_sound})
+          |> JS.push("value-change", value: %{by: -1})
+        }
+      >
+        <.icon name="hero-minus-circle" class="h-10 w-10" />
+      </.button>
+    </div>
+  </div>
+
+  <div class="mt-6">
+      <.button
+        class="text-xl"
+        phx-click={
+          JS.dispatch("js:play-sound", detail: %{name: "click"})
+          |> JS.push("delayed-server-sound")
+        }
+      >
+        Delayed "win" event pushed from the server
+      </.button>
+  </div>
+</div>
