@@ -81,6 +81,7 @@ export const hooks = {
         var [key, value] = entry;
         obj[key] = new Howl({
           src: value,
+          preload: true,
           onplayerror: function () {
             console.error("FAILED to play" + key)
           }
