@@ -37,6 +37,7 @@ The following is a rough outline of the steps taken to add this approach to a pr
 - add sound related code in `index.html.heex`
 - add delayed sound event pushed from server.
 
-**Notes:**
+**Note:**
+
 In a real application, could use Ecto schemas to validate user inputs and limits. This is trying to keep the demo as simple as possible.
 
