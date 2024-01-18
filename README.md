@@ -8,7 +8,7 @@ The solution uses the [Howler.js](https://www.npmjs.com/package/howler) library 
 
 Check out the demo video to see what it does. Make sure your sound is turned on!
 
-[Sound effect demo](./phoenix-sound-effect-demo.mp4)
+[![Sound effect Youtube demo video](./YoutubeLinkImage.png)](https://www.youtube.com/watch?v=0ySoGdGPSyA)
 
 ## Steps to run
 
@@ -20,10 +20,12 @@ Check out the demo video to see what it does. Make sure your sound is turned on!
 
 ## Steps to duplicate
 
+This process is covered in greater detail in the Fly.io blog article [Making Phoenix LiveView Sing!](https://fly.io/phoenix-files/making-phoenix-liveview-sing/).
+
 The following is a rough outline of the steps taken to add this approach to a project.
 
 - add `assets/js/hooks/audio_mp3.js`
-- updated app.js to load hooks
+- updated `app.js` to load the hook file
 - add Howler from npm
   - `cd assets; npm i howler` adds to `package.json`
 - `mix esbuild.install`
@@ -31,10 +33,10 @@ The following is a rough outline of the steps taken to add this approach to a pr
 - add `assign_sounds` to mount in LiveView
 - add `priv/static/audio/` and some audio files.
 - update `lib/sing_web.ex` to add `audio` to the list
-- add code in `index.ex`
+- add sound related code in `index.ex`
+- add sound related code in `index.html.heex`
 - add delayed sound event pushed from server.
 
-
 **Notes:**
-- In a real application, could use Ecto schemas to validate the input and limits. Keeping it simple.
+In a real application, could use Ecto schemas to validate user inputs and limits. This is trying to keep the demo as simple as possible.
 
