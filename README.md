@@ -20,7 +20,7 @@ Check out the demo video to see what it does. Make sure your sound is turned on!
 
 ## Steps to duplicate
 
-This process is covered in greater detail in the Fly.io blog article [Making Phoenix LiveView Sing!](https://fly.io/phoenix-files/making-phoenix-liveview-sing/).
+This process is covered in greater detail in the [Fly.io blog](https://fly.io/phoenix-files/) article [Making Phoenix LiveView Sing!](https://fly.io/phoenix-files/making-phoenix-liveview-sing/).
 
 The following is a rough outline of the steps taken to add this approach to a project.
 
