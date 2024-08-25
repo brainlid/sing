@@ -27,14 +27,15 @@ This process is covered in greater detail in the [Fly.io blog](https://fly.io/ph
 The following is a rough outline of the steps taken to add this approach to a project.
 
 - add `assets/js/hooks/audio_mp3.js`
-- updated `app.js` to load the hook file
+- update `app.js` to load the hook file
+- ensure `app.js` loads hooks when `new LiveSocket` is created
 - add Howler from npm
   - `cd assets; npm i howler` adds to `package.json`
 - `mix esbuild.install`
 - add HTML code for hook to page, output sounds in HTML `data-sounds`
 - add `assign_sounds` to mount in LiveView
 - add `priv/static/audio/` and some audio files.
-- update `lib/sing_web.ex` to add `audio` to the list
+- update `lib/sing_web.ex` to add `audio` to the list of static folders
 - add sound related code in `index.ex`
 - add sound related code in `index.html.heex`
 - add delayed sound event pushed from server.
